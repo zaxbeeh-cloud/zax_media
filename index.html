@@ -1,120 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>زاكس للمديا | ZAX MEDIA</title>
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;background:#080808;color:#fff;font-family:Tahoma,Arial,sans-serif}
-    nav{padding:18px 8%;display:flex;justify-content:space-between;border-bottom:1px solid #222;position:sticky;top:0;background:#080808ee;z-index:100}
-    .logo{font-size:25px;font-weight:900;color:#ffd21a}
-    nav a{color:#ddd;text-decoration:none;margin:0 10px}
-    .hero{min-height:78vh;padding:90px 8%;display:flex;align-items:center;background:radial-gradient(circle at 75% 25%,#5b4900,transparent 30%)}
-    .badge{color:#ffd21a;border:1px solid #665400;border-radius:30px;padding:7px 15px;display:inline-block}
-    h1{font-size:clamp(45px,8vw,85px);line-height:1.05;margin:20px 0}
-    .gold{color:#ffd21a}
-    .hero p{max-width:680px;color:#aaa;font-size:19px;line-height:1.9}
-    .btn{display:inline-block;background:#ffd21a;color:#111;padding:14px 25px;border-radius:10px;text-decoration:none;font-weight:bold;margin:10px 8px 0 0}
-    .btn-whatsapp{background:#25D366;color:#fff}
-    .alt{background:transparent;color:#fff;border:1px solid #444}
-    section{padding:75px 8%}
-    h2{text-align:center;font-size:38px}
-    .sub{text-align:center;color:#999;margin-bottom:40px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-    .card{background:#111;border:1px solid #292929;border-radius:18px;padding:28px}
-    .card h3{color:#ffd21a}
-    .card p{color:#aaa;line-height:1.8}
-    .icon{font-size:35px}
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-    .stat{background:#111;border:1px solid #292929;border-radius:15px;padding:25px;text-align:center}
-    .stat b{display:block;color:#ffd21a;font-size:30px}
-    .contact{text-align:center;background:#0e0e0e}
-    .box{max-width:650px;margin:auto;border:1px solid #292929;border-radius:20px;padding:35px}
-    footer{text-align:center;padding:25px;color:#777;border-top:1px solid #222}
-    
-    /* زر الواتساب العائم */
-    .whatsapp-float{
-      position:fixed;
-      bottom:25px;
-      left:25px;
-      background-color:#25d366;
-      color:#FFF;
-      border-radius:50px;
-      text-align:center;
-      padding:12px 20px;
-      z-index:100;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-      text-decoration:none;
-      display:flex;
-      align-items:center;
-      gap:8px;
-      font-size:16px;
-      font-weight:bold;
-    }
-    
-    @media(max-width:650px){
-      nav div:last-child{display:none}
-      .stats{grid-template-columns:1fr}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="ZAX MEDIA - وكالة تسويق رقمي وإعلانات ممولة">
+<title>ZAX MEDIA | زاكس للمديا</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Cairo,Tahoma,sans-serif;background:#050505;color:#fff;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(rgba(255,210,26,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,210,26,.018) 1px,transparent 1px);background-size:55px 55px;z-index:-1}
+:root{--gold:#ffd21a;--gold2:#ffae00;--muted:#9d9d9d;--card:#0d0d0f}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,90%);margin:auto}
+nav{height:78px;position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,5,5,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
+.navin{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:27px;font-weight:900;letter-spacing:2px}.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:28px;color:#bbb;font-size:14px}.navlinks a:hover{color:var(--gold)}
+.navbtn{background:var(--gold);color:#111;padding:10px 18px;border-radius:9px;font-weight:800;font-size:13px}
+.hero{min-height:100vh;padding-top:150px;display:flex;align-items:center;position:relative}
+.glow{position:absolute;width:600px;height:600px;background:var(--gold);filter:blur(180px);opacity:.11;right:-250px;top:100px;border-radius:50%}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,210,26,.3);background:rgba(255,210,26,.06);color:var(--gold);padding:7px 15px;border-radius:50px;font-size:13px;margin-bottom:22px}
+.dot{width:7px;height:7px;background:var(--gold);border-radius:50%;box-shadow:0 0 15px var(--gold)}
+h1{font-size:clamp(48px,7vw,86px);line-height:1.03;font-weight:900;margin-bottom:25px}
+.gold{color:var(--gold);text-shadow:0 0 35px rgba(255,210,26,.18)}
+.hero p{color:#aaa;font-size:18px;line-height:2;max-width:650px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:14px 25px;border-radius:11px;font-weight:800;transition:.25s;display:inline-flex;align-items:center;gap:8px}
+.primary{background:var(--gold);color:#111;box-shadow:0 10px 35px rgba(255,210,26,.12)}.primary:hover{transform:translateY(-3px);box-shadow:0 15px 45px rgba(255,210,26,.24)}
+.secondary{border:1px solid #333;color:#eee}.secondary:hover{border-color:var(--gold);color:var(--gold)}
+.hero-card{height:470px;border:1px solid #292929;border-radius:28px;background:linear-gradient(145deg,#151515,#090909);position:relative;overflow:hidden;box-shadow:0 30px 100px #000}
+.hero-card:before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:var(--gold);filter:blur(90px);opacity:.16;left:-80px;top:-80px}
+.dash{position:absolute;inset:45px 35px;background:#090909;border:1px solid #292929;border-radius:20px;padding:25px;transform:rotate(-3deg);box-shadow:0 25px 70px #000}
+.dash-top{display:flex;justify-content:space-between;color:#777;font-size:12px}.dash-title{font-size:22px;font-weight:900;margin:25px 0}.bars{height:150px;display:flex;align-items:end;gap:10px;border-bottom:1px solid #252525}.bar{flex:1;background:linear-gradient(#ffd21a,#8e6900);border-radius:5px 5px 0 0;animation:rise 1.2s ease both}.b1{height:35%}.b2{height:55%}.b3{height:43%}.b4{height:72%}.b5{height:60%}.b6{height:88%}.result{display:flex;justify-content:space-between;margin-top:22px}.result strong{font-size:28px;color:var(--gold)}.result small{color:#777}
+section{padding:110px 0}
+.section-head{text-align:center;margin-bottom:50px}.eyebrow{color:var(--gold);font-size:13px;font-weight:800;letter-spacing:1px}.section-head h2{font-size:clamp(34px,5vw,52px);margin:8px 0}.section-head p{color:#888;max-width:600px;margin:auto}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:linear-gradient(145deg,#111,#090909);border:1px solid #252525;border-radius:20px;padding:28px;transition:.3s;position:relative;overflow:hidden}.card:hover{transform:translateY(-8px);border-color:#6f5b00}.card:after{content:"";position:absolute;width:100px;height:100px;background:var(--gold);filter:blur(70px);opacity:0;top:-30px;right:-30px;transition:.3s}.card:hover:after{opacity:.15}.icon{font-size:35px}.card h3{margin:15px 0 8px;color:#fff}.card p{color:#888;font-size:14px;line-height:1.9}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.stat{padding:35px;text-align:center;border:1px solid #252525;border-radius:20px;background:#0d0d0d}.stat b{font-size:42px;color:var(--gold);display:block}.stat span{color:#888}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{border-top:1px solid #333;padding:25px}.num{font-size:13px;color:var(--gold)}.step h3{margin:8px 0}.step p{color:#888;font-size:14px}
+.cta{margin-bottom:70px;background:radial-gradient(circle at 20% 50%,rgba(255,210,26,.13),transparent 35%),linear-gradient(145deg,#121212,#090909);border:1px solid #2c2c2c;border-radius:28px;padding:65px;text-align:center}.cta h2{font-size:clamp(35px,5vw,58px)}.cta p{color:#999;margin:15px auto 20px;max-width:650px}
+footer{border-top:1px solid #222;padding:28px 0;color:#666}.footerin{display:flex;justify-content:space-between;gap:20px}.footerin b{color:var(--gold)}
+@keyframes rise{from{height:0}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-card{display:none}.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.navlinks{display:none}.navbtn{display:none}.hero{padding-top:125px}.cards,.stats,.process{grid-template-columns:1fr}.cta{padding:40px 20px}.footerin{flex-direction:column;text-align:center}}
+</style>
 </head>
 <body>
 
-  <nav>
-    <div class="logo">ZAX MEDIA</div>
-    <div>
-      <a href="#services">الخدمات</a>
-      <a href="#about">عنّا</a>
-      <a href="#contact">تواصل</a>
-    </div>
-  </nav>
+<nav><div class="container navin">
+<a class="logo" href="#">ZAX <span>MEDIA</span></a>
+<div class="navlinks"><a href="#services">الخدمات</a><a href="#why">ليه زاكس؟</a><a href="#process">طريقة الشغل</a><a href="#contact">تواصل</a></div>
+<a class="navbtn" href="https://wa.me/201271316715?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%B2%D8%A7%D9%83%D8%B3%20%D9%84%D9%84%D9%85%D8%AF%D9%8A%D8%A7">واتساب</a>
+</div></nav>
 
-  <header class="hero">
-    <div>
-      <span class="badge">ZAX MEDIA • DIGITAL MARKETING</span>
-      <h1>إعلاناتك<br><span class="gold">توصل صح.</span></h1>
-      <p>زاكس للمديا — بنساعد أصحاب المشاريع والمحلات يوصلوا لعملاء أكتر من خلال الإعلانات الممولة وصناعة المحتوى وإدارة صفحات السوشيال ميديا.</p>
-      <a class="btn" href="#contact">ابدأ حملتك</a>
-      <a class="btn alt" href="#services">خدماتنا</a>
-    </div>
-  </header>
+<header class="hero"><div class="glow"></div><div class="container hero-grid">
+<div>
+<div class="badge"><span class="dot"></span> وكالة تسويق رقمي • ZAX MEDIA</div>
+<h1>خلّي مشروعك<br><span class="gold">يتشاف صح.</span></h1>
+<p>إعلانات ممولة، محتوى، واستهداف ذكي يساعد نشاطك يوصل للناس الصح. من أول فكرة الإعلان لحد متابعة النتائج — كل حاجة في مكان واحد.</p>
+<div class="buttons"><a class="btn primary" href="https://wa.me/201271316715?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%B2%D8%A7%D9%83%D8%B3%20%D9%84%D9%84%D9%85%D8%AF%D9%8A%D8%A7">ابدأ حملتك ↗</a><a class="btn secondary" href="#services">استكشف الخدمات</a></div>
+</div>
+<div class="hero-card"><div class="dash">
+<div class="dash-top"><span>ZAX CAMPAIGN</span><span>LIVE ●</span></div>
+<div class="dash-title">أداء الحملة</div>
+<div class="bars"><i class="bar b1"></i><i class="bar b2"></i><i class="bar b3"></i><i class="bar b4"></i><i class="bar b5"></i><i class="bar b6"></i></div>
+<div class="result"><div><small>Reach</small><strong>+68%</strong></div><div><small>Leads</small><strong>+42%</strong></div></div>
+</div></div>
+</div></header>
 
-  <section id="services">
-    <h2>خدمات <span class="gold">زاكس</span></h2>
-    <p class="sub">حلول تسويقية مناسبة لنشاطك وميزانيتك</p>
-    <div class="grid">
-      <div class="card"><div class="icon">📣</div><h3>إعلانات ممولة</h3><p>إعداد واستهداف ومتابعة حملات Facebook وInstagram.</p></div>
-      <div class="card"><div class="icon">🎯</div><h3>استهداف العملاء</h3><p>تحديد الجمهور والمناطق والاهتمامات المناسبة لنشاطك.</p></div>
-      <div class="card"><div class="icon">🎨</div><h3>تصميم المحتوى</h3><p>تصميمات وإعلانات بصرية مناسبة للصفحة والحملة.</p></div>
-      <div class="card"><div class="icon">📱</div><h3>إدارة السوشيال</h3><p>تنظيم المحتوى ومتابعة التفاعل والحضور الرقمي.</p></div>
-    </div>
-  </section>
+<section id="services"><div class="container">
+<div class="section-head"><div class="eyebrow">WHAT WE DO</div><h2>كل اللي محتاجه <span class="gold">براندك</span></h2><p>خدمات رقمية مصممة عشان تخلي حضورك أقوى وتواصلك مع العملاء أوضح.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">📣</div><h3>إعلانات ممولة</h3><p>إعداد الحملات وإدارة الميزانية ومتابعة الأداء على منصات التواصل.</p></div>
+<div class="card"><div class="icon">🎯</div><h3>استهداف ذكي</h3><p>تحديد الجمهور والموقع والاهتمامات بما يناسب طبيعة نشاطك.</p></div>
+<div class="card"><div class="icon">🎨</div><h3>تصميم محتوى</h3><p>تصميمات إعلانية عصرية تساعد عرض منتجك أو خدمتك بشكل احترافي.</p></div>
+<div class="card"><div class="icon">📱</div><h3>إدارة صفحات</h3><p>تنظيم المحتوى وتحسين شكل الصفحة ومتابعة التفاعل مع الجمهور.</p></div>
+</div></div></section>
 
-  <section id="about">
-    <h2>ليه <span class="gold">زاكس؟</span></h2>
-    <p class="sub">شغل واضح ومتابعة مستمرة وتركيز على هدف الحملة.</p>
-    <div class="stats">
-      <div class="stat"><b>24/7</b>متابعة</div>
-      <div class="stat"><b>🎯</b>استهداف</div>
-      <div class="stat"><b>📊</b>تقارير</div>
-    </div>
-  </section>
+<section id="why"><div class="container">
+<div class="section-head"><div class="eyebrow">WHY ZAX</div><h2>شغل <span class="gold">واضح</span> من البداية</h2><p>بنحدد الهدف، نجهز الحملة، نتابع الأرقام، ونوضحلك اللي بيحصل.</p></div>
+<div class="stats"><div class="stat"><b>🎯</b><span>استهداف حسب نشاطك</span></div><div class="stat"><b>📊</b><span>متابعة وتحليل النتائج</span></div><div class="stat"><b>⚡</b><span>تعديلات سريعة للحملة</span></div></div>
+</div></section>
 
-  <section class="contact" id="contact">
-    <div class="box">
-      <h2>جاهز تبدأ؟</h2>
-      <p class="sub">ابعتلنا نشاطك والمدينة والميزانية التقريبية ونقترح بداية مناسبة.</p>
-      <a class="btn btn-whatsapp" href="https://api.whatsapp.com/send?phone=201271316715" target="_blank">تواصل على واتساب 💬</a>
-    </div>
-  </section>
+<section id="process"><div class="container">
+<div class="section-head"><div class="eyebrow">HOW IT WORKS</div><h2>بنشتغل <span class="gold">إزاي؟</span></h2></div>
+<div class="process"><div class="step"><div class="num">01 — نحدد الهدف</div><h3>نفهم نشاطك</h3><p>نعرف المنتج أو الخدمة والمدينة والعميل المستهدف.</p></div><div class="step"><div class="num">02 — نبني الحملة</div><h3>نجهز الإعلان</h3><p>نختار المحتوى والجمهور والميزانية المناسبة.</p></div><div class="step"><div class="num">03 — نتابع ونطور</div><h3>نقرأ النتائج</h3><p>نتابع الأداء ونعدل الحملة بناءً على البيانات.</p></div></div>
+</div></section>
 
-  <!-- زر الواتساب العائم -->
-  <a href="https://api.whatsapp.com/send?phone=201271316715" class="whatsapp-float" target="_blank">
-    💬 تواصل معنا
-  </a>
+<section id="contact"><div class="container"><div class="cta">
+<div class="eyebrow">LET'S WORK</div><h2>جاهز تخلي الناس <span class="gold">تشوفك؟</span></h2><p>ابعتلنا نشاطك والمدينة والميزانية التقريبية، وابدأ مع زاكس للمديا.</p>
+<a class="btn primary" href="https://wa.me/201271316715?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A8%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%B2%D8%A7%D9%83%D8%B3%20%D9%84%D9%84%D9%85%D8%AF%D9%8A%D8%A7">كلمنا على واتساب ↗</a>
+</div></div></section>
 
-  <footer>© 2026 ZAX MEDIA — زاكس للمديا</footer>
-
-</body>
-</html>
+<footer><div class="container footerin"><span>© 2026 <b>ZAX MEDIA</b> — جميع الحقوق محفوظة</span><span>Digital Marketing • Social Media • Ads</span></div></footer>
+</body></html>
